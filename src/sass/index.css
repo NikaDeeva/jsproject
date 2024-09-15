@@ -1,1 +1,132 @@
-/*# sourceMappingURL=index.css.map */
+.container {
+  width: 1090px;
+  margin: 0 auto;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-image: url(./images/body.jpg);
+  background-repeat: repeat;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "Monsterrat Alternates", sans-serif;
+  font-size: 16px;
+}
+
+p, span {
+  font-family: "Monsterrat Alternates", sans-serif;
+  font-size: 12px;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.football {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.football__title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 36px;
+}
+.football__field {
+  background-color: #5abb58;
+  border: 2px solid #000;
+  border-radius: 37px;
+  width: 720px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+.football__img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-container {
+  width: 100%;
+  background-color: #FFF;
+  margin: 0 auto;
+}
+.footer__logo {
+  width: 165px;
+}
+.footer__text {
+  text-align: start;
+  font-weight: 400;
+  color: #000;
+}
+.footer__label {
+  display: flex;
+}
+.footer__mail {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px 80px;
+  margin-right: 36px;
+  max-width: 204px;
+  background-color: #D7D7D7;
+}
+.footer__mail::-moz-placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: start;
+  color: #7E7E7E;
+}
+.footer__mail::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: start;
+  color: #7E7E7E;
+}
+.footer__btn {
+  border: 1px solid #000;
+  color: #FFF;
+  background-color: #000;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.footer__describe {
+  text-align: start;
+  font-size: 6px;
+  margin-top: 18px;
+  color: #000;
+}/*# sourceMappingURL=index.css.map */
