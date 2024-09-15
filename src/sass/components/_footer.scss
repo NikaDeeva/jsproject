@@ -1,0 +1,52 @@
+.footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-container{
+        width: 100%;
+        background-color: $backgroundAll;
+        margin: 0 auto;
+    }
+    &__logo{
+        width: 165px;
+    }
+    &__text{
+        text-align: start;
+        font-weight: 400;
+        color: $backgroundBtn;
+    }
+    &__label{
+        display: flex;
+    }
+    &__mail{
+        border: none;
+        border-radius: 20px;
+        padding: 10px 10px 10px 80px;
+        margin-right: 36px;
+        max-width: 204px;
+       background-color: $backgroundInput;
+        &::placeholder{
+            font-size: 12px;
+            font-weight: 400;
+            text-align: start;
+            color: $inputText;
+        }
+    }
+    &__btn{
+        border: 1px solid $backgroundBtn;
+        color: $backgroundAll;
+        background-color: $backgroundBtn;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    &__describe{
+        text-align: start;
+        font-size: 6px;
+        margin-top: 18px;
+        color: $backgroundBtn;
+    }
+}
