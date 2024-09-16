@@ -1,0 +1,22 @@
+.slider{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  &__title{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    margin: 36px 0px;
+  }
+  &__div{
+    display: flex;
+  }
+  &__images{
+    margin: 0px 328px;
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+  }
+}
