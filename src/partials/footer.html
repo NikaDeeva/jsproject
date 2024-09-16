@@ -1,5 +1,5 @@
 <!-- Nika -->
- <footer class="footer">
+ <footer class="footer container">
 <div class="footer__logo-wrap">
     <img src="./images/footerlogo.png" class="footer__logo" alt="">
 </div>
@@ -23,8 +23,20 @@
 <div class="footer__subscribe">
     <label class="footer__label">
         <input type="email" required class="footer__mail" placeholder="Ваша ел. адреса...">
-        <button class="footer__btn">Підписатись</button>
+        <button class="footer__btn" type="button" data-modal-open>Підписатись</button>
     </label>
     <span class="footer__describe">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</span>
+</div>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+       <div class="modal__close-wrap">
+        <button class="modal__close" type="button" data-modal-close>
+            <svg class="modal__close-icon">
+                <use href="./images/cross.svg"></use>
+            </svg>
+        </button>
+       </div>
+       <h2 class="modal__title">Дякую за підписку!</h2>
+    </div>
 </div>
  </footer>
