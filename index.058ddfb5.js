@@ -1,2 +1,0 @@
-function e(){document.querySelector("[data-modal]").classList.toggle("is-hidden"),document.body.classList.toggle("no-scroll")}document.querySelector("[data-modal-open]").addEventListener("click",(function(t){const o=document.querySelector(".footer__mail");""!==o.value?e():(alert("Введіть вашу пошту"),o.style.borderColor="red",t.preventDefault())})),document.querySelector("[data-modal-close]").addEventListener("click",(function(){e()}));
-//# sourceMappingURL=index.058ddfb5.js.map
