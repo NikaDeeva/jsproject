@@ -8,7 +8,8 @@ body{
     padding: 0;
     margin: 0;
     background-image: url(../images/body.jpg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 *,
 ::after,
@@ -33,6 +34,7 @@ ul,ol{
 a{
     text-decoration: none;
     cursor: pointer;
+    color: $backgroundBtn;
 }
 img{
     display: block;

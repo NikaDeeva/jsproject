@@ -9,7 +9,7 @@ function toggleModal() {
   document.querySelector('[data-modal-open]').addEventListener('click', function (event) {
     const mail = document.querySelector('.footer__mail');
   
-    if (mail.value !== '') {
+    if (mail.value !== '' && mail.value.includes('@')) {
       toggleModal(); 
     } else {
       alert('Введіть вашу пошту');
