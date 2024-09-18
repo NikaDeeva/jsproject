@@ -23,7 +23,7 @@ function findLargest() {
     const largest = Math.max(number1, number2, number3);
 
   
-    document.getElementById('result').textContent = "The largest number is: " + largest;
+    document.getElementById('result').textContent = largest;
 }
 
 
