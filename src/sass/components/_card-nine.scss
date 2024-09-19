@@ -20,18 +20,18 @@
     display: flex;
     overflow: hidden;
   }
-  &__button {
+  &__btn {
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: transparent;
+    border: none;
   }
 }
 .slider__button:disabled {
-  background-color: black;
   cursor: not-allowed;
 }
-.slides {
+.slide {
   display: none;
 }
-.slides.active {
+.slide.active {
   display: block;
 }
