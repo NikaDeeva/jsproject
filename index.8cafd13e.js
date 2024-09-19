@@ -1,2 +1,0 @@
-let e=0;const t=document.querySelectorAll(".slide"),c=document.querySelector("#prevBtn"),s=document.querySelector("#nextBtn");function d(){c.disabled=0===e,s.disabled=e===t.length-1}c.addEventListener("click",(()=>{t[e].classList.remove("active"),e+=-1,t[e].classList.add("active"),d()})),s.addEventListener("click",(()=>{t[e].classList.remove("active"),e+=1,t[e].classList.add("active"),d()})),d();
-//# sourceMappingURL=index.8cafd13e.js.map
