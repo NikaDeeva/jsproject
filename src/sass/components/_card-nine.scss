@@ -1,8 +1,8 @@
 .slider{
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
+    flex-direction: column;
+    align-items: center;
+   background-color: white;
   &__title{
     font-family: var(--font-family);
     font-weight: 400;
@@ -13,10 +13,31 @@
   &__div{
     display: flex;
   }
-  &__images{
+  &__slider{
     margin: 0px 328px;
     border-radius: 20px;
     width: 150px;
     height: 150px;
+    display: flex;
+    overflow: hidden;
+    
+  
   }
+
+  &__button{
+    cursor: pointer;
+    background-color: aquamarine;
+  }
+
+}
+.slider__button:disabled{
+  background-color:black ;
+  cursor: not-allowed;
+}
+.slides{
+  display: none;
+
+}
+.slides.active{
+  display: block;
 }
