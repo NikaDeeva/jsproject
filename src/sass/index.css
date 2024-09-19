@@ -138,11 +138,30 @@ img {
 .slider__div {
   display: flex;
 }
-.slider__images {
+.slider__slider {
   margin: 0px 328px;
   border-radius: 20px;
   width: 150px;
   height: 150px;
+  display: flex;
+  overflow: hidden;
+}
+.slider__button {
+  cursor: pointer;
+  background-color: aquamarine;
+}
+
+.slider__button:disabled {
+  background-color: black;
+  cursor: not-allowed;
+}
+
+.slides {
+  display: none;
+}
+
+.slides.active {
+  display: block;
 }
 
 .footer {
