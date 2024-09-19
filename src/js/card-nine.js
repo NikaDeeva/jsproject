@@ -2,6 +2,7 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
+const dots = document.querySelectorAll('.dot');
 
 function updateButtons() {
   prevBtn.disabled = currentSlide === 0;
