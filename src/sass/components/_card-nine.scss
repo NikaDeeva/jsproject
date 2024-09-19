@@ -1,43 +1,37 @@
-.slider{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   background-color: white;
-  &__title{
-    font-family: var(--font-family);
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  &__title {
     font-weight: 400;
     font-size: 16px;
     color: #000;
     margin: 36px 0px;
   }
-  &__div{
+  &__div {
     display: flex;
   }
-  &__slider{
+  &__slider {
     margin: 0px 328px;
     border-radius: 20px;
     width: 150px;
     height: 150px;
     display: flex;
     overflow: hidden;
-    
-  
   }
-
-  &__button{
+  &__button {
     cursor: pointer;
     background-color: aquamarine;
   }
-
 }
-.slider__button:disabled{
-  background-color:black ;
+.slider__button:disabled {
+  background-color: black;
   cursor: not-allowed;
 }
-.slides{
+.slides {
   display: none;
-
 }
-.slides.active{
+.slides.active {
   display: block;
 }
