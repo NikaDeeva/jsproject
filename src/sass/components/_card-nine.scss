@@ -35,3 +35,19 @@
 .slide.active {
   display: block;
 }
+.pagination{
+  display: flex;
+  width: 174px;
+  justify-content: space-between;
+}
+.dot {
+  width: 18px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #D9D9D9;
+  transition: width 250ms ease-in-out;
+}
+.dot.active {
+  width: 30px;
+  background-color: #797979;
+}
