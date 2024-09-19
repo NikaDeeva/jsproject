@@ -6,6 +6,9 @@ const nextBtn = document.querySelector('#nextBtn');
 function updateButtons() {
   prevBtn.disabled = currentSlide === 0;
   nextBtn.disabled = currentSlide === slides.length - 1;
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentSlide);
+  });
 }
 prevBtn.addEventListener('click', () => {
   let number = -1;
