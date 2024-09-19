@@ -129,7 +129,6 @@ img {
   background-color: white;
 }
 .slider__title {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   color: #000;
@@ -146,21 +145,21 @@ img {
   display: flex;
   overflow: hidden;
 }
-.slider__button {
+.slider__btn {
   cursor: pointer;
-  background-color: aquamarine;
+  background-color: transparent;
+  border: none;
 }
 
 .slider__button:disabled {
-  background-color: black;
   cursor: not-allowed;
 }
 
-.slides {
+.slide {
   display: none;
 }
 
-.slides.active {
+.slide.active {
   display: block;
 }
 
