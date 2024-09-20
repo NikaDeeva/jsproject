@@ -41,11 +41,67 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #000;
+  font-family: "Monsterrat Alternates", sans-serif;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+.header {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #FFF;
+  margin: 0 auto;
+}
+.header__logo {
+  width: 93px;
+}
+.header__list {
+  display: flex;
+}
+.header__open-menu {
+  cursor: pointer;
+}
+.header .show {
+  display: block;
+}
+.header__menu {
+  position: relative;
+  display: inline-block;
+}
+.header__menu-list {
+  display: none;
+  position: absolute;
+  background-color: #FFF;
+  z-index: 99;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 160px;
+}
+.header__menu-item {
+  cursor: pointer;
+  display: block;
+}
+.header__menu-item:hover {
+  background-color: #7E7E7E;
+}
+.header__menu-item a {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 55px;
+}
+.header__link {
+  font-size: 12px;
+  font-weight: 400;
+}
+.header__wellcome {
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .football {
@@ -278,7 +334,6 @@ img {
   background-image: url(../images/footerback.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 .modal__close {
   display: flex;
