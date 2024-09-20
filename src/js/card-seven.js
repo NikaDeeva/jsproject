@@ -7,8 +7,8 @@ field.addEventListener('click', event => {
   const ballWidth = ball.offsetWidth;
   const ballHeight = ball.offsetHeight;
 
-  let clickX = event.clientX - field.offsetLeft;
-  let clickY = event.clientY - field.offsetTop;
+  let clickX = event.pageX - field.offsetLeft;
+  let clickY = event.pageY - field.offsetTop;
 
   const minX = ballWidth / 2;
   const minY = ballHeight / 2;
