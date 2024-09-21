@@ -6,9 +6,22 @@
     <nav class="header__nav">
         <ul class="header__list">
             <li class="header__item header__open-menu">
-                <a href="#" type="button" class="header__link">Інтерактив</a>
-                <img src="./images/arrowdown.png" alt="" width="9" height="5">
-            </li>
+                <a href="#" class="header__link">Інтерактив</a>
+                <img src="./images/arrowdown.png" alt="" width="5" height="9">
+                <div class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="./partials/card-one.html">Числовий</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./partials/card-six.html">Ігровий</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./partials/card-ten.html">Ознайомчий</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>            
             <li class="header__item">
                 <a href="#" class="header__link">Наша команда</a>
             </li>
@@ -17,41 +30,29 @@
             </li>
         </ul>
     </nav>
-    <div class="header__menu"></div>
-        <ul class="header__menu-list">
-            <li class="header__menu-item">
-                <a href="./partials/card-one.html">Числовий</a>
-            </li>
-            <li class="header__menu-item">
-                <a href="./partials/card-six.html">Ігровий</a>
-            </li>
-            <li class="header__menu-item">
-                <a href="./partials/card-ten.html">Ознайомчий</a>
-            </li>
-        </ul>
-    </div>
     <div class="header__wrap">
         <button class="header__light"></button>
-        <p class="header__wellcome">Вітаємо, User!</p>
+        <p class="header__wellcome">Вітаємо, </p>
+        <button class="header__modal-open" type="button" header-modal-open>
+            <img class="header__user" src="./images/user.jpg" alt="">
+        </button>
     </div>
-    <div class="backdrop is-hidden" >
+    <div class="backdrop is-hidden" header-modal>
         <div class="header__modal">
           <div class="header__close-wrap">
-            <button class="header__close">
-                <svg class="header__close-icon">
-                    <use href="./images/cross.svg"></use>
-                </svg>
+            <button class="header__close" header-modal-close>
+                <img class="header__close-icon" src="./images/cross.svg" alt="">
             </button>
           </div>
-          <p class="header__modal-text">Привіт!
-            Ви потрапили на сайт інтерактивних ігор та завдань
-            Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+          <p class="header__modal-text">Привіт! <br>
+            Ви потрапили на сайт інтерактивних ігор та завдань <br>
+            Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br>
             Бажаємо Вам гарно провести час!</p>
-         <label class="header__modal-fill">
             <p class="header__modal-ask">Введіть своє ім'я</p>
+         <label class="header__modal-fill">
             <input type="text" class="header__modal-name" placeholder="Ваше ім'я...">
-            <button class="header__modal-save">Зберегти</button>
          </label>
+         <button class="header__modal-save" type="button">Зберегти</button>
         </div>
     </div>
  </header>
