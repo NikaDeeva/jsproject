@@ -1,0 +1,83 @@
+.dino {
+  padding-bottom: 36px;
+  margin: 0 auto;
+  background-color: $backgroundAll;
+  .border {
+    display: flex;
+    margin: 0 auto;
+    background-color: $backgroundBtn;
+    width: 536px;
+    height: 1px;
+    margin-bottom: 36px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__container {
+    margin-top: 36px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://static.wpsocket.com/plugin/dinosaur-game/banner-772x250.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: bottom;
+  }
+  &__results {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__btn {
+    fill: white;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    font-size: 20px;
+    cursor: pointer;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 15px;
+    display: none;
+  }
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 25px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__points {
+    right: 0;
+    position: absolute;
+  }
+  &__player {
+    width: 50px;
+    height: 60px;
+    transition: all 0.2s;
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+  }
+  &__cactus {
+    width: 32px;
+    height: 50px;
+    transition: all 0.2s;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+  }
+}
