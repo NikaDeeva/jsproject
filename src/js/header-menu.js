@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 const open = document.querySelector('.header__open-menu');
 const menu = document.querySelector('.header__menu');
 
@@ -21,3 +22,4 @@ menuItems.forEach(item => {
         menu.classList.remove('show');
     });
 });
+
