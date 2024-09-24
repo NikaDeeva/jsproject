@@ -8,8 +8,10 @@
     background-color: $backgroundAll;
     margin: 0 auto;
     
-    &__logo{
+    &__logo-icon{
         width: 165px;
+        height: 70px;
+        fill: none;
     }
     &__text{
         text-align: start;
@@ -97,7 +99,7 @@
       cursor: pointer;
     }
     &__close-icon{
-      fill: black;
+      fill: $backgroundBtn;
       width: 15px;
       height: 15px;
     }

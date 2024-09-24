@@ -9,6 +9,8 @@
     margin: 0 auto;
     &__logo{
         width: 93px;
+        height: 38px;
+        fill: none;
     }
     &__list{
         display: flex;
@@ -21,7 +23,12 @@
 cursor: pointer;
 display: flex;
 align-items: center;
-
+    }
+    &__arrow{
+        width: 5px;
+        height: 9px;
+        fill: $backgroundBtn;
+        transform: rotate(180deg);
     }
     &__link{
 font-size: 12px;
@@ -68,15 +75,45 @@ font-weight: 400;
     display: flex;
     align-items: center;
 }
+&__light{
+    width: 40px;
+    height: 20px;
+    background-color: $backgroundLights;
+    border-radius: 11px;
+    margin-right: 51px;
+    cursor: pointer;
+}
+&__light-circle{
+    width: 20px;
+    height: 20px;
+    background-color: $backgroundAll;
+    border: 1px solid $backgroundBtn;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+&__light-icon{
+    width: 15px;
+    height: 15px;
+}
 &__modal-open{
     background-color: transparent;
     border: none;
     margin-left: 15px;
     cursor: pointer;
 }
+&__modal-open:hover{
+.header__user{
+    fill: $backgroundLights;
+}
+}
 &__user{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    fill: $backgroundBtn;
+    transition-duration: 250ms;
 }
 &__modal{
     position: absolute;
@@ -105,10 +142,16 @@ font-weight: 400;
     margin-bottom: 20px;
     cursor: pointer;
 }
+&__close:hover{
+    .header__close-icon{
+        fill: $backgroundLights;
+    }
+}
 &__close-icon{
-    fill: black;
+    fill: $backgroundBtn;
     width: 15px;
     height: 15px;
+    transition-duration: 250ms;
 }
 &__modal-text{
     text-align: center;
