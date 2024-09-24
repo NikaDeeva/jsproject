@@ -44,3 +44,21 @@ img{
     display: block;
     width: 100%;
 }
+.dark{
+    .container{
+        background-color: rgb(57, 57, 69);
+    }
+    h1, h2, h3, h4, h5, h6, a, p, span{
+        color: $backgroundAll;
+    }
+    .header__light-circle, .border{
+        background-color: $backgroundBtn;
+    }
+   svg{
+        fill: $backgroundAll;
+        stroke: $backgroundAll;
+    }
+    .header__logo, .footer__logo-icon{
+        fill: none;  
+    }
+}
