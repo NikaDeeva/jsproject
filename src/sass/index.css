@@ -284,6 +284,46 @@ img {
   margin: 0 auto;
 }
 
+.three {
+  background-color: #FFF;
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.three__title {
+  margin-bottom: 36px;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+}
+.three__list {
+  display: flex;
+  justify-content: center;
+}
+.three__item {
+  margin-right: 38px;
+}
+.three__btn {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+.three__img {
+  width: 40px;
+  height: 40px;
+}
+.three__result {
+  position: absolute;
+  bottom: 70px;
+  left: 800px;
+}
+
 .dino {
   padding-bottom: 36px;
   margin: 0 auto;

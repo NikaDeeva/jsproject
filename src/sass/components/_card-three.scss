@@ -1,0 +1,39 @@
+.three{
+    background-color: $backgroundAll;
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    &__title{
+        margin-bottom: 36px;
+        text-align: center;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 400;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        margin-right: 38px;
+    }
+    &__btn{
+        width: 60px;
+        height: 60px;
+        background-color: $backgroundBtn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+    }
+    &__img{
+        width: 40px;
+        height: 40px;
+    }
+    &__result{
+        position: absolute;
+        bottom: 70px;
+        left: 800px;
+    }
+}
