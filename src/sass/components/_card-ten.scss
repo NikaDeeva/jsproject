@@ -1,0 +1,37 @@
+.scientist {
+  padding-bottom: 36px;
+  padding-top: 36px;
+  margin: 0 auto;
+  background-color: $backgroundAll;
+  .border {
+    display: flex;
+    margin: 0 auto;
+    background-color: $backgroundBtn;
+    width: 536px;
+    height: 1px;
+    margin-bottom: 36px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 577px;
+    justify-content: space-between;
+    margin: 0 auto;
+    row-gap: 36px;
+  }
+  &__item {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: $backgroundCard;
+  }
+  &__item:not(:nth-child(4n)) {
+    margin-right: 59px;
+  }
+}

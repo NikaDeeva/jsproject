@@ -53,6 +53,9 @@ img {
   width: 100%;
 }
 
+.dark {
+  background-image: url(../images/blackback.avif);
+}
 .dark .container {
   background-color: #111111;
 }
@@ -77,6 +80,9 @@ img {
 .dark .header__modal, .dark .modal {
   background-color: #111111;
   background-image: none;
+}
+.dark .football__field {
+  background-color: rgb(16, 92, 8);
 }
 
 .header {
