@@ -54,20 +54,29 @@ img {
 }
 
 .dark .container {
-  background-color: rgb(57, 57, 69);
+  background-color: #111111;
 }
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark a, .dark p, .dark span {
-  color: #FFF;
+  color: #D9D9D9;
 }
 .dark .header__light-circle, .dark .border {
-  background-color: #000;
+  background-color: #111111;
 }
 .dark svg {
-  fill: #FFF;
-  stroke: #FFF;
+  fill: #D9D9D9;
+  stroke: #D9D9D9;
 }
 .dark .header__logo, .dark .footer__logo-icon {
   fill: none;
+}
+.dark input {
+  border: 1px solid #D9D9D9;
+  background-color: transparent;
+  color: #D9D9D9;
+}
+.dark .header__modal, .dark .modal {
+  background-color: #111111;
+  background-image: none;
 }
 
 .header {
@@ -193,7 +202,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(1);
   transition: opacity 500ms cubic-bezier(0.83, -0.08, 0.32, 1) 250ms;
-  background-image: url(../images/footerback.png);
+  background-image: url(../images/footerback.svg);
   background-repeat: no-repeat;
   background-position: center;
   z-index: 999;
@@ -474,12 +483,17 @@ img {
   width: 150px;
   height: 150px;
   display: flex;
-  overflow: hidden;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 .slider__btn {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  height: 100px;
+}
+.slider__p {
+  margin-top: 20px;
 }
 
 .slider__button:disabled {
@@ -498,6 +512,7 @@ img {
   display: flex;
   width: 174px;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .dot {
@@ -511,6 +526,20 @@ img {
 .dot.active {
   width: 30px;
   background-color: #797979;
+}
+
+.images {
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.name-align {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -608,7 +637,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(1);
   transition: opacity 500ms cubic-bezier(0.83, -0.08, 0.32, 1) 250ms;
-  background-image: url(../images/footerback.png);
+  background-image: url(../images/footerback.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -621,10 +650,14 @@ img {
   margin-bottom: 20px;
   cursor: pointer;
 }
+.modal__close:hover .modal__close-icon {
+  fill: #7A7A7A;
+}
 .modal__close-icon {
   fill: #000;
   width: 15px;
   height: 15px;
+  transition-duration: 250ms;
 }
 .modal__title {
   font-size: 20px;
