@@ -45,8 +45,8 @@ img{
     width: 100%;
 }
 .dark{
+    background-image: url(../images/blackback.avif);
     .container{
-        // background-color: rgb(57, 57, 69);
         background-color: $darkBackground;
     }
     h1, h2, h3, h4, h5, h6, a, p, span{
@@ -70,5 +70,9 @@ img{
     .header__modal, .modal{
         background-color: $darkBackground;
         background-image: none;
+    }
+    .football__field{
+        background-color: rgb(16, 92, 8);
+        border-color: $darkColor;
     }
 }
