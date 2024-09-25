@@ -18,12 +18,17 @@
     width: 150px;
     height: 150px;
     display: flex;
-    overflow: hidden;
+    justify-content: center;
+    margin-bottom: 100px;
   }
   &__btn {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    height: 100px;
+  }
+  &__p{
+    margin-top: 20px;
   }
 }
 .slider__button:disabled {
@@ -39,6 +44,7 @@
   display: flex;
   width: 174px;
   justify-content: space-between;
+  align-items: baseline;
 }
 .dot {
   width: 18px;
@@ -51,3 +57,17 @@
   width: 30px;
   background-color: #797979;
 }
+.images{
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.name-align{
+  display: flex;
+  justify-content: center; 
+}
+
