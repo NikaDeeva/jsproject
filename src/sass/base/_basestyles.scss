@@ -46,19 +46,29 @@ img{
 }
 .dark{
     .container{
-        background-color: rgb(57, 57, 69);
+        // background-color: rgb(57, 57, 69);
+        background-color: $darkBackground;
     }
     h1, h2, h3, h4, h5, h6, a, p, span{
-        color: $backgroundAll;
+        color: $darkColor;
     }
     .header__light-circle, .border{
-        background-color: $backgroundBtn;
+        background-color: $darkBackground;
     }
    svg{
-        fill: $backgroundAll;
-        stroke: $backgroundAll;
+        fill: $darkColor;
+        stroke: $darkColor;
     }
     .header__logo, .footer__logo-icon{
         fill: none;  
+    }
+    input{
+        border: 1px solid $darkColor;
+        background-color: transparent;
+        color: $darkColor;
+    }
+    .header__modal, .modal{
+        background-color: $darkBackground;
+        background-image: none;
     }
 }
