@@ -25,8 +25,8 @@ display: flex;
 align-items: center;
     }
     &__arrow{
-        width: 5px;
-        height: 9px;
+        width: 15px;
+        height: 19px;
         fill: $backgroundBtn;
         transform: rotate(180deg);
     }
@@ -45,12 +45,13 @@ font-weight: 400;
 &__menu {
     display: none; 
     position: absolute;
-    top: 100%; 
-    left: 0;
+    top: 80px; 
     background-color: $backgroundAll; 
     z-index: 10;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     width: 160px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .show {
@@ -60,6 +61,7 @@ font-weight: 400;
 &__menu-item {
     padding: 10px 20px;
     cursor: pointer;
+    transition-duration: 250ms;
 }
 
 &__menu-item a {
