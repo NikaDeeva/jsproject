@@ -1,0 +1,2 @@
+const e=document.querySelector(".header__open-menu"),t=document.querySelector(".header__menu");e.addEventListener("click",function(e){e.stopPropagation(),t.classList.toggle("show")}),document.addEventListener("click",function(n){!t.classList.contains("show")||t.contains(n.target)||e.contains(n.target)||t.classList.remove("show")}),document.querySelectorAll(".header__menu-item").forEach(e=>{e.addEventListener("click",()=>{t.classList.remove("show")})});
+//# sourceMappingURL=index.0fa0268f.js.map

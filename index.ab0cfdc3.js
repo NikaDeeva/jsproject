@@ -1,2 +1,0 @@
-!function(){var t=document.getElementById("footballField"),e=document.getElementById("ball");t.addEventListener("click",(function(a){var f=t.offsetWidth,n=t.offsetHeight,o=e.offsetWidth,i=e.offsetHeight,c=a.pageX-t.offsetLeft,l=a.pageY-t.offsetTop,s=o/2,d=i/2,m=f-o/2,h=n-i/2,g=Math.min(Math.max(c,s),m),r=Math.min(Math.max(l,d),h);e.style.transform="translate(".concat(g-s,"px, ").concat(r-d,"px)")}))}();
-//# sourceMappingURL=index.ab0cfdc3.js.map

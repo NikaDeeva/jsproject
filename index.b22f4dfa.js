@@ -1,0 +1,2 @@
+!function(){let t=document.getElementById("footballField"),e=document.getElementById("ball");t.addEventListener("click",f=>{let a=t.offsetWidth,o=t.offsetHeight,l=e.offsetWidth,n=e.offsetHeight,i=f.pageX-t.offsetLeft,s=f.pageY-t.offsetTop,d=l/2,m=n/2,h=Math.min(Math.max(i,d),a-l/2),g=Math.min(Math.max(s,m),o-n/2);e.style.transform=`translate(${h-d}px, ${g-m}px)`})}();
+//# sourceMappingURL=index.b22f4dfa.js.map

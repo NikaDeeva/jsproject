@@ -1,0 +1,2 @@
+const t=document.getElementById("footballField"),e=document.getElementById("ball");t.addEventListener("click",f=>{let a=t.offsetWidth,o=t.offsetHeight,l=e.offsetWidth,n=e.offsetHeight,s=f.pageX-t.offsetLeft,d=f.pageY-t.offsetTop,i=l/2,m=n/2,h=Math.min(Math.max(s,i),a-l/2),g=Math.min(Math.max(d,m),o-n/2);e.style.transform=`translate(${h-i}px, ${g-m}px)`});
+//# sourceMappingURL=index.d35eed96.js.map

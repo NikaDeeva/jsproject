@@ -1,2 +1,0 @@
-let e=0;const t=document.querySelectorAll(".slide"),c=document.querySelector("#prevBtn"),l=document.querySelector("#nextBtn"),s=document.querySelectorAll(".dot");function d(){c.disabled=0===e,l.disabled=e===t.length-1,s.forEach(((t,c)=>{t.classList.toggle("active",c===e)}))}c.addEventListener("click",(()=>{t[e].classList.remove("active"),e+=-1,t[e].classList.add("active"),d()})),l.addEventListener("click",(()=>{t[e].classList.remove("active"),e+=1,t[e].classList.add("active"),d()})),d();
-//# sourceMappingURL=index.d9bd3cc9.js.map

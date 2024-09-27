@@ -1,2 +1,0 @@
-const e=document.querySelector("[header-modal]"),t=document.querySelector("[header-modal-open]"),o=document.querySelector("[header-modal-close]");function c(){e.classList.toggle("is-hidden")}t.addEventListener("click",c),o.addEventListener("click",c);document.querySelector(".header__modal-save").addEventListener("click",(function(){const e=document.querySelector(".header__modal-name").value,t=document.querySelector(".header__wellcome");e.length>0?(t.textContent=`Вітаємо, ${e}!`,c()):alert("Будь ласка, введіть ваше ім'я")}));
-//# sourceMappingURL=index.d7ebe744.js.map
