@@ -18,6 +18,13 @@
         font-weight: 400;
         color: $backgroundBtn;
     }
+    &__link{
+      color: $backgroundBtn;
+      transition-duration: 250ms;
+    }
+    &__link:hover{
+      color: $inputText;
+    }
     &__label{
         display: flex;
     }
