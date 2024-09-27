@@ -62,11 +62,16 @@
         align-items: center;
         border: none;
         border-radius: 20px;
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    &__feedback-img{
-        width: 20px;
-        height: 20px;
-    }
+    // &__feedback-img{
+    //     width: 20px;
+    //     height: 20px;
+    //     visibility: visible;
+    //     opacity: 1;
+    // }
     &__result{
         position: absolute;
         bottom: 70px;

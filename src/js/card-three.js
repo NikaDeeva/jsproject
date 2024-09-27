@@ -24,11 +24,12 @@ function updateScore() {
 }
 
 function updateCompChoice(choice) {
-    compChoice.innerHTML = '';
-    const img = document.createElement('img');
-    img.classList.add('three__feedback-img');
-    img.src = `./images/${choice}.png`;
-    compChoice.appendChild(img);
+compChoice.style.backgroundImage = `url('images/${choice}.png')`;
+    // compChoice.innerHTML = '';
+    // let img = document.createElement('img');
+    // img.classList.add('three__feedback-img');
+    // img.src = `./images/${choice}.png`;
+    // compChoice.appendChild(img);
 }
 
 stone.addEventListener('click', event => {
@@ -84,3 +85,4 @@ paper.addEventListener('click', event => {
     }
     updateScore();
 });
+console.log(compChoice.innerHTML);
