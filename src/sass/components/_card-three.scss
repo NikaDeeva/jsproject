@@ -39,20 +39,27 @@
         font-weight: 400;
         font-family: 'Montserrat Alternates', sans-serif;
     }
-    &__feedback{
+    &__comp-choice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__chose{
         font-size: 16px;
         margin-top: 36px;
         margin-bottom: 36px;
         text-align: center;
         font-weight: 400;
         font-family: 'Montserrat Alternates', sans-serif;
-        width: 40px;
-        height: 40px;
+        margin-right: 50px;
+    }
+    &__feedback{
+        width: 50px;
+        height: 50px;
         background-color: $backgroundBtn;
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
         border: none;
         border-radius: 20px;
     }

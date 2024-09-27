@@ -7,7 +7,6 @@ let message = document.querySelector('.three__message');
 let countYou = document.querySelector('.three__count-you');
 let countComp = document.querySelector('.three__count-comp');
 let compChoice = document.querySelector('.three__feedback');
-let compChoiceImg = document.querySelector('.three__feedback-img');
 
 const options = ['stone', 'scissors', 'paper'];
 
@@ -25,20 +24,11 @@ function updateScore() {
 }
 
 function updateCompChoice(choice) {
-    let imgSrc = '';
-    
-    switch (choice) {
-        case 'stone':
-            imgSrc = './images/stone.png';
-            break;
-        case 'scissors':
-            imgSrc = './images/scissors.png';
-            break;
-        case 'paper':
-            imgSrc = './images/paper.png';
-            break;
-    }
-    compChoiceImg.src = imgSrc;
+    compChoice.innerHTML = '';
+    const img = document.createElement('img');
+    img.classList.add('three__feedback-img');
+    img.src = `./images/${choice}.png`;
+    compChoice.appendChild(img);
 }
 
 stone.addEventListener('click', event => {
