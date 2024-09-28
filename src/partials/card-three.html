@@ -5,30 +5,32 @@
     <h2 class="three__title">Камінь - ножиці - папір</h2>
     <ul class="three__list">
         <li class="three__item">
-<button class="three__btn stone">
+<button class="three__btn" id="stone">
     <img class="three__img" src="./images/stone.png" alt="">
 </button>
         </li>
         <li class="three__item">
-<button class="three__btn scissors">
+<button class="three__btn" id="scissors">
     <img class="three__img" src="./images/scissors.png" alt="">
 </button>
         </li>
         <li class="three__item">
-<button class="three__btn paper">
+<button class="three__btn" id="paper">
     <img class="three__img" src="./images/paper.png" alt="">
 </button>
         </li>
     </ul>
-    <p class="three__massage"></p>
-    <div class="three__feedback"></div>
+    <p class="three__message"></p>
+    <div class="three__comp-choice">
+    <p class="three__chose">Комп'ютер обрав: <span class="three__feedback"></span></p>
+</div>
 </div>
     <div class="three__result">
         <p class="three__result-text">Рахунок: <br>
             <br>
-            Комп’ютер - 0 <br>
+            Комп’ютер - <span class="three__count-comp">0</span> <br>
             <br>
-            Ви - 0
+            Ви - <span class="three__count-you">0</span>
         </p>
     </div>
  </section>

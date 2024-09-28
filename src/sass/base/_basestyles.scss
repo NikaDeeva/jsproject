@@ -41,7 +41,7 @@ img{
 }
 .dark{
     background-image: url(../images/blackback.avif);
-    .container{
+    .container, section{
         background-color: $darkBackground;
     }
     h1, h2, h3, h4, h5, h6, a, p, span{
