@@ -204,3 +204,15 @@ btnBornLate.addEventListener('click', () => {
     firstScientistItem.appendChild(hoverEl);
   }
 });
+
+btnAlbertBorn.addEventListener('click', () => {
+    const einstein = scientists.find(
+      scientist =>
+        scientist.name === 'Albert' && scientist.surname === 'Einstein'
+    );
+    if (einstein) {
+      alert(`Альберт Ейнштейн народився в ${einstein.born} році.`);
+    } else {
+      alert('Альберт Ейнштейн не знайдений.');
+    }
+});
