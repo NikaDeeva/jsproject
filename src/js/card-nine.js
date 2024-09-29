@@ -26,7 +26,7 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
   let number = 1;
-  slides[currentSlide].classList.remove('active');
+  slides[currentSlide].classList.remove('active'); 
   currentSlide += number;
   slides[currentSlide].classList.add('active');
   updateButtons();
