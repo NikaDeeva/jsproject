@@ -29,7 +29,7 @@
     justify-content: center;
     margin-bottom: 100px;
   }
-  &__btn {
+  &__button {
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -37,6 +37,12 @@
   }
   &__p{
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+   color: #000;
   }
 }
 .slider__button:disabled {
@@ -53,6 +59,7 @@
   width: 174px;
   justify-content: space-between;
   align-items: baseline;
+  margin-top: 30px;
 }
 .dot {
   width: 18px;
@@ -79,3 +86,11 @@
   justify-content: center; 
 }
 
+.arrow{
+  background-color: white;
+}
+.name{
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
