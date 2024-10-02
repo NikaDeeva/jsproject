@@ -30,7 +30,7 @@ document.addEventListener('mousemove', (e) => {
 
         if (circleX > maxX / 2) {
             document.body.classList.add('dark');
-            icon.src = "./images/moon.svg";
+            icon.src = "https://static.vecteezy.com/system/resources/previews/019/899/719/non_2x/simple-moon-icon-png.png";
             
         } else {
             document.body.classList.remove('dark');
