@@ -98,19 +98,22 @@ const scientists = [
 ];
 const scientistItems = document.querySelectorAll('.scientist__item');
 
-scientists.forEach((scientist, index) => {
-  if (scientistItems[index]) {
-    const img = document.createElement('img');
-    img.src = scientist.img;
-    img.alt = `${scientist.name} ${scientist.surname}`;
-    scientistItems[index].appendChild(img);
+const updateCard = () => {
+  scientists.forEach((scientist, index) => {
+    if (scientistItems[index]) {
+      const img = document.createElement('img');
+      img.src = scientist.img;
+      img.alt = `${scientist.name} ${scientist.surname}`;
+      scientistItems[index].appendChild(img);
 
-    const hoverEl = document.createElement('div');
-    hoverEl.classList.add('scientist__hover');
-    hoverEl.textContent = `${scientist.name} ${scientist.surname}`;
-    scientistItems[index].appendChild(hoverEl);
-  }
-});
+      const hoverEl = document.createElement('div');
+      hoverEl.classList.add('scientist__hover');
+      hoverEl.textContent = `${scientist.name} ${scientist.surname}`;
+      scientistItems[index].appendChild(hoverEl);
+    }
+  });
+};
+updateCard();
 
 const btnBorn = document.getElementById('btnBorn');
 const btnSortAlphabet = document.getElementById('btnSortAlphabet');
@@ -126,10 +129,14 @@ btnBorn.addEventListener('click', () => {
   scientists.forEach((scientist, index) => {
     const scientistItem = scientistItems[index];
     const img = scientistItem.querySelector('img');
+    const hoverEl = scientistItem.querySelector('div');
+    const parent = scientistItem.parentElement;
     if (scientist.born >= 1801 && scientist.born <= 1900) {
       scientistItem.style.display = 'block';
     } else {
       img.style.display = 'none';
+      hoverEl.style.display = 'none';
+      parent.appendChild(scientistItem);
     }
   });
 });
@@ -206,13 +213,12 @@ btnBornLate.addEventListener('click', () => {
 });
 
 btnAlbertBorn.addEventListener('click', () => {
-    const einstein = scientists.find(
-      scientist =>
-        scientist.name === 'Albert' && scientist.surname === 'Einstein'
-    );
-    if (einstein) {
-      alert(`Альберт Ейнштейн народився в ${einstein.born} році.`);
-    } else {
-      alert('Альберт Ейнштейн не знайдений.');
-    }
+  const einstein = scientists.find(
+    scientist => scientist.name === 'Albert' && scientist.surname === 'Einstein'
+  );
+  if (einstein) {
+    alert(`Альберт Ейнштейн народився в ${einstein.born} році.`);
+  } else {
+    alert('Альберт Ейнштейн не знайдений.');
+  }
 });
