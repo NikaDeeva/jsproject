@@ -79,6 +79,21 @@ img {
   background-color: rgb(16, 92, 8);
   border-color: #D9D9D9;
 }
+.dark .scientist__bg {
+  background-color: #111111;
+}
+.dark .header__item:hover {
+  background-color: #000;
+}
+.dark .header__menu {
+  background-color: #111111;
+}
+.dark .header__menu-item a {
+  color: #D9D9D9;
+}
+.dark .header__menu-item:hover {
+  background-color: #000;
+}
 
 button {
   cursor: pointer;
@@ -756,7 +771,7 @@ button {
   justify-content: center;
   margin-bottom: 100px;
 }
-.slider__btn {
+.slider__button {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -764,6 +779,12 @@ button {
 }
 .slider__p {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
 }
 
 .slider__button:disabled {
@@ -783,6 +804,7 @@ button {
   width: 174px;
   justify-content: space-between;
   align-items: baseline;
+  margin-top: 30px;
 }
 
 .dot {
@@ -812,18 +834,26 @@ button {
   justify-content: center;
 }
 
+.arrow {
+  background-color: white;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+
 .scientist {
   margin: 0 auto;
+  padding-bottom: 36px;
+  padding-top: 36px;
+  background-color: #FFF;
 }
 .scientist__container {
   width: 1090px;
   margin: 0 auto;
   padding: 0 147px;
-}
-.scientist__bg {
-  padding-bottom: 36px;
-  padding-top: 36px;
-  background-color: #FFF;
 }
 .scientist .border {
   display: flex;

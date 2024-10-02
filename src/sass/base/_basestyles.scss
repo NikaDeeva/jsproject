@@ -70,6 +70,21 @@ img{
         background-color: rgb(16, 92, 8);
         border-color: $darkColor;
     }
+    .scientist__bg{
+        background-color: $darkBackground;
+    }
+    .header__item:hover{
+        background-color: $backgroundBtn;
+    }
+    .header__menu{
+        background-color: $darkBackground;
+    }
+    .header__menu-item a{
+        color: $darkColor;
+    }
+    .header__menu-item:hover {
+        background-color: $backgroundBtn; 
+    }
 }
 button {
     cursor: pointer;
