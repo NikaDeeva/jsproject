@@ -1,14 +1,12 @@
 .scientist {
   margin: 0 auto;
+  padding-bottom: 36px;
+    padding-top: 36px;
+    background-color: $backgroundAll;
   &__container {
     width: 1090px;
     margin: 0 auto;
     padding: 0 147px;
-  }
-  &__bg {
-    padding-bottom: 36px;
-    padding-top: 36px;
-    background-color: $backgroundAll;
   }
   .border {
     display: flex;
