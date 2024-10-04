@@ -1,76 +1,76 @@
-.three{
-    background-color: $backgroundAll;
-    position: relative;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    &__title{
-        margin-bottom: 36px;
-        text-align: center;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-weight: 400;
-    }
-    &__list{
-        display: flex;
-        justify-content: center;
-    }
-    &__item{
-        margin-right: 38px;
-    }
-    &__btn{
-        width: 60px;
-        height: 60px;
-        background-color: $backgroundBtn;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        border-radius: 20px;
-    }
-    &__img{
-        width: 40px;
-        height: 40px;
-    }
-    &__message{
-        font-size: 12px;
-        margin-top: 36px;
-        text-align: center;
-        font-weight: 400;
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
-    &__comp-choice{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__chose{
-        font-size: 16px;
-        margin-top: 36px;
-        margin-bottom: 36px;
-        text-align: center;
-        font-weight: 400;
-        font-family: 'Montserrat Alternates', sans-serif;
-        margin-right: 50px;
-    }
-    &__feedback{
-        border: 1px solid $backgroundBtn;
-        border-radius: 20px;
-         color: $backgroundAll;
-        background-color: $backgroundBtn;
-        padding: 10px;
-        font-size: 14px;
-        font-weight: 400;
-        font-family: "Montserrat Alternates", sans-serif;
-    }
-    // &__feedback-img{
-    //     width: 20px;
-    //     height: 20px;
-    //     visibility: visible;
-    //     opacity: 1;
-    // }
-    &__result{
-        position: absolute;
-        bottom: 70px;
-        left: 800px;
-    }
+.three {
+  background-color: $backgroundAll;
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  &__title {
+    margin-bottom: 36px;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin-right: 38px;
+  }
+  &__btn {
+    width: 60px;
+    height: 60px;
+    background-color: $backgroundBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+  }
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+  &__message {
+    font-size: 12px;
+    margin-top: 36px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  &__comp-choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__chose {
+    font-size: 16px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-right: 50px;
+  }
+  &__feedback {
+    border: 1px solid $backgroundBtn;
+    border-radius: 20px;
+    color: $backgroundAll;
+    background-color: $backgroundBtn;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  // &__feedback-img{
+  //     width: 20px;
+  //     height: 20px;
+  //     visibility: visible;
+  //     opacity: 1;
+  // }
+  &__result {
+    position: absolute;
+    bottom: 70px;
+    left: 800px;
+  }
 }
