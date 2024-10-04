@@ -123,7 +123,7 @@ const btnAlbertBorn = document.getElementById('btnAlbertBorn');
 const btnSearchSurname = document.getElementById('btnSearchSurname');
 const btnDeleteName = document.getElementById('btnDeleteName');
 const btnLiveLess = document.getElementById('btnLiveLess');
-const btnSameLetter = document.getElementById('btnSameLetters');
+const btnSameLetters = document.getElementById('btnSameLetters');
 
 btnBorn.addEventListener('click', () => {
   scientists.forEach((scientist, index) => {
@@ -233,7 +233,6 @@ btnSearchSurname.addEventListener('click', () => {
     if (scientist.surname.startsWith('C')) {
       scientistItem.style.display = 'block';
     } else {
-      //  scientistItem.style.display = 'none';
       img.style.display = 'none';
       hoverEl.style.display = 'none';
       parent.appendChild(scientistItem);
@@ -252,7 +251,6 @@ btnDeleteName.addEventListener('click', () => {
       img.style.display = 'none';
       parent.appendChild(scientistItem);
     } else {
-      //    scientistItem.style.display = 'block';
       img.style.display = 'block';
       hoverEl.style.display = 'block';
     }
@@ -268,14 +266,16 @@ btnLiveLess.addEventListener('click', () => {
 
   const maxYears = Math.max(...array);
   const minYears = Math.min(...array);
-  
+
   scientists.forEach((scientist, index) => {
     const scientistItem = scientistItems[index];
     const img = scientistItem.querySelector('img');
     const hoverEl = scientistItem.querySelector('div');
     const parent = scientistItem.parentElement;
-    if ((scientist.dead - scientist.born) === maxYears ||
-      (scientist.dead - scientist.born) === minYears) {
+    if (
+      scientist.dead - scientist.born === maxYears ||
+      scientist.dead - scientist.born === minYears
+    ) {
       scientistItem.style.display = 'block';
     } else {
       img.style.display = 'none';
@@ -288,11 +288,15 @@ btnLiveLess.addEventListener('click', () => {
 btnSameLetters.addEventListener('click', () => {
   scientists.forEach((scientist, index) => {
     const scientistItem = scientistItems[index];
-    
+    const img = scientistItem.querySelector('img');
+    const hoverEl = scientistItem.querySelector('div');
+    const parent = scientistItem.parentElement;
     if (scientist.name.charAt(0) === scientist.surname.charAt(0)) {
-      scientistItem.style.display = 'block'; // Показати елемент
+      scientistItem.style.display = 'block';
     } else {
-      scientistItem.style.display = 'none'; // Приховати елемент
+      img.style.display = 'none';
+      hoverEl.style.display = 'none';
+      parent.appendChild(scientistItem);
     }
   });
 });
