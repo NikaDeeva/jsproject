@@ -1,8 +1,6 @@
 .slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: $backgroundAll;
+  padding: 0 92px;
   .border {
     display: flex;
     margin: 0 auto;
@@ -16,18 +14,19 @@
     font-size: 16px;
     color: #000;
     margin: 36px 0px;
+    text-align: center;
   }
   &__div {
     display: flex;
+    height: 300px;
+    align-items: center;
   }
   &__slider {
-    margin: 0px 328px;
+    margin: 0px 115px;
     border-radius: 20px;
-    width: 150px;
-    height: 150px;
+    width: 576px;
     display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
+    // justify-content: center;
   }
   &__button {
     cursor: pointer;
@@ -35,15 +34,25 @@
     border: none;
     height: 100px;
   }
-  &__p{
-    margin-top: 20px;
+  &__position {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  &__iten:nth-child(2) {
+     margin-top: 15px
+  }
+  &__p {
     display: flex;
     align-items: center;
-    justify-content: center;
     font-weight: 400;
-    font-size: 12px;
-   color: #000;
+    font-size: 20px;
+    color: #000;
+    margin-top: 5px;
   }
+}
+.slide {
+  display: flex;
 }
 .slider__button:disabled {
   cursor: not-allowed;
@@ -52,45 +61,44 @@
   display: none;
 }
 .slide.active {
-  display: block;
+  display: flex;
 }
-.pagination{
+.pagination {
   display: flex;
   width: 174px;
   justify-content: space-between;
   align-items: baseline;
+  margin: 0 auto;
   margin-top: 30px;
 }
 .dot {
   width: 18px;
   height: 3px;
   border-radius: 3px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   transition: width 250ms ease-in-out;
 }
 .dot.active {
   width: 30px;
   background-color: #797979;
 }
-.images{
+.images {
   border-radius: 20px;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   display: flex;
   overflow: hidden;
   margin-bottom: 20px;
+  margin-right: 25px;
 }
-
-.name-align{
-  display: flex;
-  justify-content: center; 
-}
-
-.arrow{
+// .name-align {
+//   display: flex;
+// }
+.arrow {
   background-color: white;
 }
-.name{
+.name {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 36px;
   color: #000;
 }

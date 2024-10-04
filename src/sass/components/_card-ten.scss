@@ -1,8 +1,8 @@
 .scientist {
   margin: 0 auto;
   padding-bottom: 36px;
-    padding-top: 36px;
-    background-color: $backgroundAll;
+  padding-top: 36px;
+  background-color: $backgroundAll;
   &__container {
     width: 1090px;
     margin: 0 auto;
@@ -88,7 +88,7 @@
   flex-wrap: wrap;
   width: 857px;
   justify-content: center;
-  &__item:last-child{
+  &__item:last-child {
     margin-top: 20px;
   }
   &__item > .scientist__btn {

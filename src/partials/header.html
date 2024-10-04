@@ -1,70 +1,80 @@
 <!-- Nika -->
- <header class="header container">
-    <div class="header__logo-wrap">
-        <svg class="header__logo"> 
-            <use href="./images/symbol-defs.svg#icon-logo"></use>
+<header class="header container">
+  <div class="header__logo-wrap">
+    <svg class="header__logo">
+      <use href="./images/symbol-defs.svg#icon-logo"></use>
+    </svg>
+  </div>
+  <nav class="header__nav">
+    <ul class="header__list">
+      <li class="header__item header__open-menu">
+        <a href="#" class="header__link">Інтерактив</a>
+        <svg class="header__arrow">
+          <use href="./images/symbol-defs.svg#icon-ctrl"></use>
         </svg>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__list">
-            <li class="header__item header__open-menu">
-                <a href="#" class="header__link">Інтерактив</a>
-                <svg class="header__arrow">
-                    <use href="./images/symbol-defs.svg#icon-ctrl"></use>
-                </svg>
-                <div class="header__menu">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item">
-                            <a href="#">Числовий</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#6">Ігровий</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#10">Ознайомчий</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>            
-            <li class="header__item">
-                <a href="#9" class="header__link">Наша команда</a>
+        <div class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#1" id="num">Числовий</a>
             </li>
-            <li class="header__item">
-                <a href="#footer" class="header__link">Контакти</a>
+            <li class="header__menu-item">
+              <a href="#6" id="game">Ігровий</a>
             </li>
-        </ul>
-    </nav>
-    <div class="header__wrap">
-        <div class="header__light">
-        <div class="header__light-circle">
-            <img class="header__light-icon" src="https://www.svgrepo.com/show/9151/sun.svg" alt=""> 
+            <li class="header__menu-item">
+              <a href="#10" id="acqua">Ознайомчий</a>
+            </li>
+          </ul>
         </div>
+      </li>
+      <li class="header__item">
+        <a href="#9" class="header__link">Наша команда</a>
+      </li>
+      <li class="header__item">
+        <a href="#footer" class="header__link">Контакти</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header__wrap">
+    <div class="header__light">
+      <div class="header__light-circle">
+        <img
+          class="header__light-icon"
+          src="https://www.svgrepo.com/show/9151/sun.svg"
+          alt=""
+        />
+      </div>
     </div>
-        <p class="header__wellcome">Вітаємо, </p>
-        <button class="header__modal-open" type="button" header-modal-open>
-            <svg class="header__user">
-                <use href="./images/symbol-defs.svg#icon-user"></use>
-            </svg>
+    <p class="header__wellcome">Вітаємо,</p>
+    <button class="header__modal-open" type="button" header-modal-open>
+      <svg class="header__user">
+        <use href="./images/symbol-defs.svg#icon-user"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="backdrop is-hidden" header-modal>
+    <div id="header__modal">
+      <div class="header__close-wrap">
+        <button class="header__close" header-modal-close>
+          <svg class="header__close-icon">
+            <use href="./images/symbol-defs.svg#icon-cross"></use>
+          </svg>
         </button>
+      </div>
+      <p class="header__modal-text">
+        Привіт! <br />
+        Ви потрапили на сайт інтерактивних ігор та завдань <br />
+        Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br />
+        Бажаємо Вам гарно провести час!
+      </p>
+      <p class="header__modal-ask">Введіть своє ім'я</p>
+      <label class="header__modal-fill">
+        <input
+          type="text"
+          class="header__modal-name"
+          placeholder="Ваше ім'я..."
+        />
+      </label>
+      <button class="header__modal-save" type="button">Зберегти</button>
     </div>
-    <div class="backdrop is-hidden" header-modal>
-        <div id="header__modal">
-          <div class="header__close-wrap">
-            <button class="header__close" header-modal-close>
-                <svg class="header__close-icon">
-                    <use href="./images/symbol-defs.svg#icon-cross"></use>
-                </svg>
-            </button>
-          </div>
-          <p class="header__modal-text">Привіт! <br>
-            Ви потрапили на сайт інтерактивних ігор та завдань <br>
-            Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br>
-            Бажаємо Вам гарно провести час!</p>
-            <p class="header__modal-ask">Введіть своє ім'я</p>
-         <label class="header__modal-fill">
-            <input type="text" class="header__modal-name" placeholder="Ваше ім'я...">
-         </label>
-         <button class="header__modal-save" type="button">Зберегти</button>
-        </div>
-    </div>
- </header>
+  </div>
+</header>
