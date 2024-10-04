@@ -27,6 +27,9 @@
     background: #d7d7d7;
     border: none;
   }
+  &__numbers::placeholder {
+    font-size: 12px;
+  }
   &__align {
     display: flex;
     justify-content: space-between;
