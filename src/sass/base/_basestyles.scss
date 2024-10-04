@@ -1,91 +1,116 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-.container{
-    width: 1090px;
-    margin: 0 auto;
-    padding: 0 175px;
+.container {
+  width: 1090px;
+  margin: 0 auto;
+  padding: 0 175px;
 }
-body{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    background-image: url(../images/body.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 16px;
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/body.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
 }
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
-h1, h2, h3, h4, h5, h6{
-    margin-bottom: 0;
-    margin-top: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  margin-top: 0;
 }
-ul,ol{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+p {
+  margin: 0;
+  padding: 0;
 }
-a{
-    text-decoration: none;
-    cursor: pointer;
-    color: $backgroundBtn;
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-img{
-    display: block;
-    width: 100%;
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $backgroundBtn;
 }
-.dark{
-    background-image: url(../images/blackback.avif);
-    .container, section{
-        background-color: $darkBackground;
-    }
-    h1, h2, h3, h4, h5, h6, a, p, span{
-        color: $darkColor;
-    }
-    .header__light-circle, .border{
-        background-color: $darkBackground;
-    }
-   svg{
-        fill: $darkColor;
-        stroke: $darkColor;
-    }
-    .header__logo, .footer__logo-icon{
-        fill: none;  
-    }
-    input{
-        border: 1px solid $darkColor;
-        background-color: transparent;
-        color: $darkColor;
-    }
-    .header__modal, .modal{
-        background-color: $darkBackground;
-        background-image: none;
-    }
-    .football__field{
-        background-color: rgb(16, 92, 8);
-        border-color: $darkColor;
-    }
-    .scientist__bg{
-        background-color: $darkBackground;
-    }
-    .header__item:hover{
-        background-color: $backgroundBtn;
-    }
-    .header__menu{
-        background-color: $darkBackground;
-    }
-    .header__menu-item a{
-        color: $darkColor;
-    }
-    .header__menu-item:hover {
-        background-color: $backgroundBtn; 
-    }
+img {
+  display: block;
+  width: 100%;
+}
+.dark {
+  background-image: url(../images/blackback.avif);
+  .container,
+  section {
+    background-color: $darkBackground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  p,
+  span,
+  input::placeholder {
+    color: $darkColor;
+  }
+  .header__light-circle,
+  .border {
+    background-color: $darkBackground;
+  }
+  svg {
+    stroke: $darkColor;
+  }
+  .header__logo,
+  .footer__logo-icon {
+    fill: none;
+  }
+  .header__user {
+    fill: $darkColor;
+  }
+  input,
+  .field {
+    border: 1px solid $darkColor;
+    background-color: transparent;
+    color: $darkColor;
+  }
+  .header__modal,
+  .modal {
+    background-color: $darkBackground;
+    background-image: none;
+  }
+  .football__field {
+    border-color: $darkColor;
+  }
+  .scientist__bg {
+    background-color: $darkBackground;
+  }
+  .header__item:hover {
+    background-color: $backgroundBtn;
+  }
+  .header__menu {
+    background-color: $darkBackground;
+  }
+  .header__menu-item a {
+    color: $darkColor;
+  }
+  .header__menu-item:hover {
+    background-color: $backgroundBtn;
+  }
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
