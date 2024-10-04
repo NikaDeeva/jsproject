@@ -114,7 +114,6 @@ const updateCard = () => {
   });
 };
 updateCard();
-
 const btnBorn = document.getElementById('btnBorn');
 const btnSortAlphabet = document.getElementById('btnSortAlphabet');
 const btnSortYearsLived = document.getElementById('btnSortYearsLived');
