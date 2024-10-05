@@ -27,6 +27,10 @@
     width: 720px;
     height: 220px;
     overflow: hidden;
+    background-image: url('../images/gate-left.png'), url('../images/gate-right.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: left, right;
   }
   &__img {
     width: 50px;
