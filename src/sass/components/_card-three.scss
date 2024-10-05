@@ -26,6 +26,10 @@
     cursor: pointer;
     border: none;
     border-radius: 20px;
+    transition: background-color 250ms ease-in-out;
+  }
+  &__btn:hover {
+    background-color: $backgroundLights;
   }
   &__img {
     width: 40px;
