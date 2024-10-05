@@ -33,19 +33,23 @@
     border: none;
     height: 100px;
   }
+  &__text-wrap {
+    margin-top: 20px;
+  }
   &__position {
     font-weight: 500;
     font-size: 20px;
     margin-top: 5px;
+    margin-bottom: 20px;
   }
   &__iten:nth-child(2) {
-     margin-top: 15px
+    margin-top: 15px;
   }
   &__p {
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     color: #000;
     margin-top: 5px;
   }
@@ -91,7 +95,7 @@
   margin-right: 25px;
 }
 .arrow {
-  background-color: white;
+  stroke: #000;
 }
 .name {
   font-weight: 400;

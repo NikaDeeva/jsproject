@@ -1,5 +1,6 @@
 .scientist {
   margin: 0 auto;
+  padding: 0 147px;
   padding-bottom: 36px;
   padding-top: 36px;
   background-color: $backgroundAll;
@@ -86,7 +87,7 @@
 .wrap {
   display: flex;
   flex-wrap: wrap;
-  width: 857px;
+  width: 821px;
   justify-content: center;
   &__item:last-child {
     margin-top: 20px;
