@@ -110,6 +110,16 @@ img {
   .header__menu-item:hover {
     background-color: $backgroundBtn;
   }
+  .arrow {
+    stroke: $backgroundAll;
+  }
+  .scientist__btn:hover {
+    background-color: transparent;
+    color: $backgroundAll;
+    .scientist__btn-item {
+      border: 1px solid $backgroundAll;
+    }
+  }
 }
 button {
   cursor: pointer;
