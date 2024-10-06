@@ -96,10 +96,21 @@ const scientists = [
     img: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Hanna_Hammarstr%C3%B6m.jpg',
   },
 ];
+const btnBorn = document.getElementById('btnBorn');
+const btnSortAlphabet = document.getElementById('btnSortAlphabet');
+const btnSortYearsLived = document.getElementById('btnSortYearsLived');
+const btnBornLate = document.getElementById('btnBornLate');
+const btnAlbertBorn = document.getElementById('btnAlbertBorn');
+const btnSearchSurname = document.getElementById('btnSearchSurname');
+const btnDeleteName = document.getElementById('btnDeleteName');
+const btnLiveLess = document.getElementById('btnLiveLess');
+const btnSameLetters = document.getElementById('btnSameLetters');
+
+const originalScientists = [...scientists];
 const scientistItems = document.querySelectorAll('.scientist__item');
 
-const updateCard = () => {
-  scientists.forEach((scientist, index) => {
+const updateCard = (scientistsList = scientists) => {
+  scientistsList.forEach((scientist, index) => {
     if (scientistItems[index]) {
       const img = document.createElement('img');
       img.src = scientist.img;
@@ -113,106 +124,52 @@ const updateCard = () => {
     }
   });
 };
-updateCard();
-const btnBorn = document.getElementById('btnBorn');
-const btnSortAlphabet = document.getElementById('btnSortAlphabet');
-const btnSortYearsLived = document.getElementById('btnSortYearsLived');
-const btnBornLate = document.getElementById('btnBornLate');
-const btnAlbertBorn = document.getElementById('btnAlbertBorn');
-const btnSearchSurname = document.getElementById('btnSearchSurname');
-const btnDeleteName = document.getElementById('btnDeleteName');
-const btnLiveLess = document.getElementById('btnLiveLess');
-const btnSameLetters = document.getElementById('btnSameLetters');
 
-btnBorn.addEventListener('click', () => {
-  scientists.forEach((scientist, index) => {
-    const scientistItem = scientistItems[index];
-    const img = scientistItem.querySelector('img');
-    const hoverEl = scientistItem.querySelector('div');
-    const parent = scientistItem.parentElement;
-    if (scientist.born >= 1801 && scientist.born <= 1900) {
-      scientistItem.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-      hoverEl.style.display = 'none';
-      parent.appendChild(scientistItem);
-    }
-  });
-});
-
-btnSortAlphabet.addEventListener('click', () => {
-  scientists.sort((a, b) => a.name.localeCompare(b.name));
-
+const resetScientists = () => {
   scientistItems.forEach(item => {
     item.innerHTML = '';
   });
+  updateCard(originalScientists);
+};
 
-  scientists.forEach((scientist, index) => {
-    if (scientistItems[index]) {
-      const img = document.createElement('img');
-      img.src = scientist.img;
-      img.alt = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(img);
+updateCard();
 
-      const hoverEl = document.createElement('div');
-      hoverEl.classList.add('scientist__hover');
-      hoverEl.textContent = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(hoverEl);
-    }
-  });
+btnBorn.addEventListener('click', () => {
+  resetScientists();
+  const filteredScientists = originalScientists.filter(
+    scientist => scientist.born >= 1801 && scientist.born <= 1900
+  );
+  updateCard(filteredScientists);
+});
+
+btnSortAlphabet.addEventListener('click', () => {
+  resetScientists();
+  const sortedScientists = [...originalScientists].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+  updateCard(sortedScientists);
 });
 
 btnSortYearsLived.addEventListener('click', () => {
-  scientists.sort((a, b) => {
+  resetScientists();
+  const sortedScientists = [...originalScientists].sort((a, b) => {
     const yearsLivedA = a.dead - a.born;
     const yearsLivedB = b.dead - b.born;
     return yearsLivedA - yearsLivedB;
   });
-
-  scientistItems.forEach(item => {
-    item.innerHTML = '';
-  });
-
-  scientists.forEach((scientist, index) => {
-    if (scientistItems[index]) {
-      const img = document.createElement('img');
-      img.src = scientist.img;
-      img.alt = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(img);
-
-      const hoverEl = document.createElement('div');
-      hoverEl.classList.add('scientist__hover');
-      hoverEl.textContent = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(hoverEl);
-    }
-  });
+  updateCard(sortedScientists);
 });
 
 btnBornLate.addEventListener('click', () => {
-  const latestBornScientist = scientists.reduce((latest, current) => {
-    return current.born > latest.born ? current : latest;
-  });
-  scientistItems.forEach(item => {
-    item.innerHTML = '';
-  });
-
-  const firstScientistItem = scientistItems[0];
-
-  if (firstScientistItem) {
-    const img = document.createElement('img');
-    img.src = latestBornScientist.img;
-    img.alt = `${latestBornScientist.name} ${latestBornScientist.surname}`;
-    firstScientistItem.appendChild(img);
-
-    const hoverEl = document.createElement('div');
-    hoverEl.classList.add('scientist__hover');
-    hoverEl.textContent = `${latestBornScientist.name} ${latestBornScientist.surname}`;
-    firstScientistItem.appendChild(hoverEl);
-  }
+  resetScientists();
+  const latestBornScientist = originalScientists.reduce((latest, current) =>
+    current.born > latest.born ? current : latest
+  );
+  updateCard([latestBornScientist]);
 });
 
 btnAlbertBorn.addEventListener('click', () => {
-  const einstein = scientists.find(
+  const einstein = originalScientists.find(
     scientist => scientist.name === 'Albert' && scientist.surname === 'Einstein'
   );
   if (einstein) {
@@ -223,79 +180,38 @@ btnAlbertBorn.addEventListener('click', () => {
 });
 
 btnSearchSurname.addEventListener('click', () => {
-  scientists.forEach((scientist, index) => {
-    const scientistItem = scientistItems[index];
-    const img = scientistItem.querySelector('img');
-    const hoverEl = scientistItem.querySelector('div');
-    const parent = scientistItem.parentElement;
-
-    if (scientist.surname.startsWith('C')) {
-      scientistItem.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-      hoverEl.style.display = 'none';
-      parent.appendChild(scientistItem);
-    }
-  });
+  resetScientists();
+  const filteredScientists = originalScientists.filter(scientist =>
+    scientist.surname.startsWith('C')
+  );
+  updateCard(filteredScientists);
 });
 
 btnDeleteName.addEventListener('click', () => {
-  scientists.forEach((scientist, index) => {
-    const scientistItem = scientistItems[index];
-    const img = scientistItem.querySelector('img');
-    const hoverEl = scientistItem.querySelector('div');
-    const parent = scientistItem.parentElement;
-
-    if (scientist.name.startsWith('A')) {
-      img.style.display = 'none';
-      parent.appendChild(scientistItem);
-    } else {
-      img.style.display = 'block';
-      hoverEl.style.display = 'block';
-    }
-  });
+  resetScientists();
+  const filteredScientists = originalScientists.filter(
+    scientist => !scientist.name.startsWith('A')
+  );
+  updateCard(filteredScientists);
 });
 
 btnLiveLess.addEventListener('click', () => {
-  let array = [];
-  scientists.forEach(scientist => {
-    const yearsLived = scientist.dead - scientist.born;
-    array.push(yearsLived);
-  });
+  resetScientists();
+  const maxYears = Math.max(...originalScientists.map(sc => sc.dead - sc.born));
+  const minYears = Math.min(...originalScientists.map(sc => sc.dead - sc.born));
 
-  const maxYears = Math.max(...array);
-  const minYears = Math.min(...array);
-
-  scientists.forEach((scientist, index) => {
-    const scientistItem = scientistItems[index];
-    const img = scientistItem.querySelector('img');
-    const hoverEl = scientistItem.querySelector('div');
-    const parent = scientistItem.parentElement;
-    if (
+  const filteredScientists = originalScientists.filter(
+    scientist =>
       scientist.dead - scientist.born === maxYears ||
       scientist.dead - scientist.born === minYears
-    ) {
-      scientistItem.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-      hoverEl.style.display = 'none';
-      parent.appendChild(scientistItem);
-    }
-  });
+  );
+  updateCard(filteredScientists);
 });
 
 btnSameLetters.addEventListener('click', () => {
-  scientists.forEach((scientist, index) => {
-    const scientistItem = scientistItems[index];
-    const img = scientistItem.querySelector('img');
-    const hoverEl = scientistItem.querySelector('div');
-    const parent = scientistItem.parentElement;
-    if (scientist.name.charAt(0) === scientist.surname.charAt(0)) {
-      scientistItem.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-      hoverEl.style.display = 'none';
-      parent.appendChild(scientistItem);
-    }
-  });
+  resetScientists();
+  const filteredScientists = originalScientists.filter(
+    scientist => scientist.name.charAt(0) === scientist.surname.charAt(0)
+  );
+  updateCard(filteredScientists);
 });
