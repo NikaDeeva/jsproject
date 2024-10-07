@@ -110,41 +110,47 @@ const originalScientists = [...scientists];
 const scientistItems = document.querySelectorAll('.scientist__item');
 
 const updateCard = (scientistsList = scientists) => {
-  scientistsList.forEach((scientist, index) => {
-    if (scientistItems[index]) {
+  scientistItems.forEach((item, index) => {
+    item.innerHTML = '';
+
+    if (scientistsList[index]) {
+      const scientist = scientistsList[index];
+
       const img = document.createElement('img');
       img.src = scientist.img;
       img.alt = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(img);
+      item.appendChild(img);
 
       const hoverEl = document.createElement('div');
       hoverEl.classList.add('scientist__hover');
       hoverEl.textContent = `${scientist.name} ${scientist.surname}`;
-      scientistItems[index].appendChild(hoverEl);
+      item.appendChild(hoverEl);
+    } else {
+      item.style.backgroundColor = '$backgroundCard';
     }
   });
 };
 
 const resetScientists = () => {
   scientistItems.forEach(item => {
-    item.innerHTML = '';
+    item.innerHTML = ''; 
   });
-  updateCard(originalScientists);
+  updateCard(originalScientists); 
 };
 
 updateCard();
 
 btnBorn.addEventListener('click', () => {
-  resetScientists();
-  const filteredScientists = originalScientists.filter(
-    scientist => scientist.born >= 1801 && scientist.born <= 1900
+  resetScientists(); 
+  const filteredScientists = originalScientists.filter(scientist => 
+    scientist.born >= 1801 && scientist.born <= 1900
   );
   updateCard(filteredScientists);
 });
 
 btnSortAlphabet.addEventListener('click', () => {
   resetScientists();
-  const sortedScientists = [...originalScientists].sort((a, b) =>
+  const sortedScientists = [...originalScientists].sort((a, b) => 
     a.name.localeCompare(b.name)
   );
   updateCard(sortedScientists);
@@ -162,7 +168,7 @@ btnSortYearsLived.addEventListener('click', () => {
 
 btnBornLate.addEventListener('click', () => {
   resetScientists();
-  const latestBornScientist = originalScientists.reduce((latest, current) =>
+  const latestBornScientist = originalScientists.reduce((latest, current) => 
     current.born > latest.born ? current : latest
   );
   updateCard([latestBornScientist]);
@@ -181,7 +187,7 @@ btnAlbertBorn.addEventListener('click', () => {
 
 btnSearchSurname.addEventListener('click', () => {
   resetScientists();
-  const filteredScientists = originalScientists.filter(scientist =>
+  const filteredScientists = originalScientists.filter(scientist => 
     scientist.surname.startsWith('C')
   );
   updateCard(filteredScientists);
@@ -189,8 +195,8 @@ btnSearchSurname.addEventListener('click', () => {
 
 btnDeleteName.addEventListener('click', () => {
   resetScientists();
-  const filteredScientists = originalScientists.filter(
-    scientist => !scientist.name.startsWith('A')
+  const filteredScientists = originalScientists.filter(scientist => 
+    !scientist.name.startsWith('A')
   );
   updateCard(filteredScientists);
 });
@@ -199,19 +205,18 @@ btnLiveLess.addEventListener('click', () => {
   resetScientists();
   const maxYears = Math.max(...originalScientists.map(sc => sc.dead - sc.born));
   const minYears = Math.min(...originalScientists.map(sc => sc.dead - sc.born));
-
-  const filteredScientists = originalScientists.filter(
-    scientist =>
-      scientist.dead - scientist.born === maxYears ||
-      scientist.dead - scientist.born === minYears
+  
+  const filteredScientists = originalScientists.filter(scientist => 
+    scientist.dead - scientist.born === maxYears || 
+    scientist.dead - scientist.born === minYears
   );
   updateCard(filteredScientists);
 });
 
 btnSameLetters.addEventListener('click', () => {
   resetScientists();
-  const filteredScientists = originalScientists.filter(
-    scientist => scientist.name.charAt(0) === scientist.surname.charAt(0)
+  const filteredScientists = originalScientists.filter(scientist => 
+    scientist.name.charAt(0) === scientist.surname.charAt(0)
   );
   updateCard(filteredScientists);
 });
