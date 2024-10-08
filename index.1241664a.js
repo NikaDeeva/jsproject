@@ -1,0 +1,2 @@
+const e=document.querySelector(".time-calc__but"),l=document.querySelector(".time-calc__result"),o=document.querySelector(".time-calc__input");e.addEventListener("click",()=>{l.innerHTML=`${Math.floor(Math.floor(o.value/60)/24)} \u{434}\u{43D}. ${Math.floor(o.value/60)-24*Math.floor(Math.floor(o.value/60)/24)<10?"0"+String(Math.floor(o.value/60)-24*Math.floor(Math.floor(o.value/60)/24)):Math.floor(o.value/60)-24*Math.floor(Math.floor(o.value/60)/24)}:${o.value%60<10?"0"+String(o.value%60):o.value%60}`,o.value=""});
+//# sourceMappingURL=index.1241664a.js.map
