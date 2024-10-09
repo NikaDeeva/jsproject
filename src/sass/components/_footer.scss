@@ -96,6 +96,7 @@
     background-image: url(../images/footerback.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     &__close{
       display: flex;
       background-color: transparent;

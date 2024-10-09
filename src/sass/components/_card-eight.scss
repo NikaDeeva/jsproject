@@ -1,14 +1,6 @@
 .number {
   background-color: white;
   padding-top: 36px;
-  .border {
-    display: flex;
-    margin: 0 auto;
-    background-color: $backgroundBtn;
-    width: 536px;
-    height: 1px;
-    margin-bottom: 36px;
-  }
   &__title {
     font-family: var(--font-family);
     font-weight: 400;

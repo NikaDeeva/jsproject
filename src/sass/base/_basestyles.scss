@@ -78,6 +78,7 @@ img {
   .header__logo,
   .footer__logo-icon {
     fill: none;
+    stroke: none;
   }
   .header__user {
     fill: $darkColor;
@@ -134,4 +135,12 @@ button {
   text-align: center;
   padding-bottom: 38px;
   font-weight: 400;
+}
+.border {
+  display: flex;
+  margin: 0 auto;
+  background-color: $backgroundBtn;
+  width: 536px;
+  height: 1px;
+  margin-bottom: 36px;
 }
