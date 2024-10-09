@@ -64,7 +64,8 @@ img {
   a,
   p,
   span,
-  input::placeholder {
+  input::placeholder,
+  .time-calc__result {
     color: $darkColor;
   }
   .header__light-circle,
@@ -82,7 +83,8 @@ img {
     fill: $darkColor;
   }
   input,
-  .field {
+  .field,
+  .time-calc__input {
     border: 1px solid $darkColor;
     background-color: transparent;
     color: $darkColor;
@@ -119,6 +121,9 @@ img {
     .scientist__btn-item {
       border: 1px solid $backgroundAll;
     }
+  }
+  .time-calc__field{
+    background-color: transparent;
   }
 }
 button {
