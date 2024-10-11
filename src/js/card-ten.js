@@ -118,7 +118,7 @@ const updateCard = (scientistsList = scientists) => {
 
       const img = document.createElement('img');
       img.src = scientist.img;
-      img.alt = `${scientist.name} ${scientist.surname}`;
+      img.alt = `${scientist.name}`;
       item.appendChild(img);
 
       const hoverEl = document.createElement('div');
