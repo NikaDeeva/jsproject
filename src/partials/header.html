@@ -1,11 +1,11 @@
 <!-- Nika -->
 <header class="header container">
   <div class="header__logo-wrap">
-    <a href="/src/index.html">
-    <svg class="header__logo">
-      <use href="./images/symbol-defs.svg#icon-logo"></use>
-    </svg>
-  </a>
+    <a href="/src/index.html" aria-label="logo">
+      <svg class="header__logo">
+        <use href="./images/symbol-defs.svg#icon-logo"></use>
+      </svg>
+    </a>
   </div>
   <nav class="header__nav">
     <ul class="header__list">
@@ -47,7 +47,12 @@
       </div>
     </div>
     <p class="header__wellcome">Вітаємо,</p>
-    <button class="header__modal-open" type="button" header-modal-open>
+    <button
+      class="header__modal-open"
+      type="button"
+      header-modal-open
+      aria-label="people"
+    >
       <svg class="header__user">
         <use href="./images/symbol-defs.svg#icon-user"></use>
       </svg>
